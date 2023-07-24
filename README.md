@@ -2,7 +2,7 @@
 This Repo consists of all the Libraries and the codes that we used to measure the time and energy consumption of cryptographic algorithms on IoT Devices
 
 1. Download Berryboot and use it to install Raspbian OS on your Raspberry pi
-2. Install Pycryptodome, Crypto and Cryptography Libraries from the Terminals of Raspbian OS (On Raspberry Pi) so that we can use them for encrypting files using the cryptographic algorithms.
+2. Install Pycryptodome, Crypto, Cryptography,Hashlib and Time Libraries from the Terminals of Raspbian OS (On Raspberry Pi) so that we can use them for encrypting files using the cryptographic algorithms.
 3. Download Arduino on your PC
 4. Extract the TroykaCurrent-master.zip to the "libraries" folder of the Arduino IDE
 5. Connect all the necessary wires with Arduino Leonardo, ACS712 and Raspberry Pi and then connect them to your PC/Laptop
