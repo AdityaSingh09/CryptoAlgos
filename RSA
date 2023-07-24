@@ -1,7 +1,7 @@
 from cryptography.hazmat.primitives.asymmetric import rsa, padding
 from cryptography.hazmat.primitives import hashes
 import time
-# Example code snippet
+
 def code_snippet():
     start_time = time.time()
     private_key = rsa.generate_private_key(
