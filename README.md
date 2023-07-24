@@ -6,4 +6,6 @@ This Repo consists of all the Libraries and the codes that we used to measure th
 3. Extraxt the TroykaCurrent-master.zip to the libraries folder of the Arduino IDE
 4. Connect all the necessary wires with Arduino Leonardo, ACS712 and Raspberry Pi and then connect them to your PC/Laptop
 5. Run the Cryptographic Algorithms on the Raspberry Pi
-6. Run the 
+6. Run the Arduino IDE and run the Current_Measuremnt code on the IDE
+7. After running the Cryptographic Algorithm on the Raspbery pi and the Current measuremnt code on your PC/Laaptop, Openn the Serial Monitor and note the readings
+
