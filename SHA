@@ -1,6 +1,6 @@
 import hashlib
 import time
-# Example code snippet
+
 def code_snippet():
     start_time = time.time()
 
