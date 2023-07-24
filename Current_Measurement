@@ -1,0 +1,41 @@
+#include <TroykaCurrent.h>
+
+
+ACS712 sensorCurrent(A0);
+
+const int analogIn = 0; //Connect current sensor with A0 of Arduino
+int mVperAmp = 185; // use 100 for 20A Module and 66 for 30A Module
+int RawValue= 0;
+int ACSoffset = 2500; 
+double Voltage = 0; //voltage measuring
+double Amps = 0;// Current measuring
+double _sum,temp;
+int num_readings=10000;
+
+void setup()
+{
+  _sum = 0;
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  
+  for(int i = 0 ;i < num_readings;i++){
+    RawValue = analogRead(analogIn);//reading the value from the analog pin
+    Voltage = (RawValue / 1024.0) * 5000; // Gets you mV
+    Amps = ((Voltage - ACSoffset) / mVperAmp);
+    //Serial.print("Current is ");
+     //temp = sensorCurrent.readCurrentAC();
+     
+    //Serial.println(Amps);
+    //Serial.println(temp);
+    _sum += Amps;
+    delay(0.000001);
+  }
+  
+  //Serial.print("Average: ");
+  Serial.println(_sum/num_readings);
+  _sum = 0;
+  
+}
