@@ -1,0 +1,37 @@
+import hashlib
+import time
+# Example code snippet
+def code_snippet():
+    start_time = time.time()
+
+    def sha256_encrypt(message):
+        sha256 = hashlib.sha256()
+        sha256.update(message.encode('utf-8'))
+        return sha256.hexdigest()
+
+    # Example usage:
+    message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mollis nunc sed id semper risus in hendrerit gravida. Sit amet nisl purus in mollis nunc sed id semper. Tempor nec feugiat nisl pretium fusce id velit ut tortor. Vitae suscipit tellus mauris a diam maecenas. Tristique nulla aliquet enim tortor at auctor urna nunc id. Leo vel fringilla est ullamcorper eget nulla facilisi etiam. Elementum curabitur vitae nunc sed velit dignissim. Tortor at risus viverra adipiscing at in tellus. Amet nulla facilisi morbi tempus iaculis urna id volutpat. Leo vel fringilla est ullamcorper eget nulla facilisi etiam dignissim. Nulla at volutpat diam ut venenatis tellus in metus vulputate.Sit amet commodo nulla facilisi nullam. Purus gravida quis blandit turpis cursus in. Elementum curabitur vitae nunc sed velit dignissim sodales. Lacus vel facilisis volutpat est velit egestas dui. Nunc pulvinar sapien et ligula ullamcorper. At urna condimentum mattis pellentesque. Libero nunc consequat interdum varius. Ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget egestas. A iaculis at erat pellentesque adipiscing commodo. Rhoncus est pellentesque elit ullamcorper dignissim. Risus feugiat in ante metus dictum at tempor. Tellus in hac habitasse platea dictumst vestibulum rhoncus. Amet facilisis magna etiam tempor orci eu lobortis elementum nibh. Sit amet justo donec enim diam vulputate. Turpis massa tincidunt dui ut ornare. Facilisi cras fermentum odio eu feugiat pretium nibh ipsum consequat. Accumsan lacus vel facilisis volutpat est velit egestas."
+
+    encrypted_message = sha256_encrypt(message)
+
+
+    print("Encrypted message:", encrypted_message)
+
+    end_time = time.time()
+    execution_time = end_time - start_time
+    print("Execution time:", execution_time, "seconds")
+    result = execution_time
+    return result
+
+# Loop the code snippet and calculate average
+num_iterations = 1000
+total_result = 0
+
+for _ in range(num_iterations):
+    result = code_snippet()
+    total_result += result
+
+average_result = total_result / num_iterations
+
+print("Average Result:", average_result)
+
